@@ -1,0 +1,31 @@
+--- Makefile	2014-08-18 00:00:00.000000000 +0900
++++ Makefile	2014-08-18 00:00:00.000000000 +0900
+@@ -0,0 +1,28 @@
++CC=cc
++AR=ar
++#DESTDIR=
++PREFIX=$(DESTDIR)/usr/local
++CFLAGS=-O3 -funroll-loops -floop-optimize -finline-functions -fPIC
++LDFLAGS=
++
++OBJ=unqlite.o
++TARGET=libunqlite.a
++INCLUDES=unqlite.h
++
++all: $(TARGET)
++
++install: $(TARGET)
++	mkdir -p $(PREFIX)/lib $(PREFIX)/include
++	$(INSTALL) -m0644 $(TARGET) $(PREFIX)/lib
++	$(INSTALL) -m0644 $(INCLUDES) $(PREFIX)/include
++
++clean:
++	-rm -f $(OBJ) $(TARGET)
++
++$(TARGET): $(OBJ)
++	$(AR) rc $(TARGET) $(OBJ)
++
++.c.o:
++	$(CC) -c $(CFLAGS) -o $@ $<
++
++unqlite.o: unqlite.c unqlite.h
