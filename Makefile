@@ -10,7 +10,7 @@ MASTER_SITES=http://unqlite.org/db/
 DISTFILES=unqlite-db-20130825-116.zip
 WRKSRC=work
 
-MAINTAINER=dearblue@users.sourceforge.jp
+MAINTAINER=dearblue@users.noreply.github.com
 COMMENT=Embeded NoSQL database engine
 
 .include <bsd.port.mk>
