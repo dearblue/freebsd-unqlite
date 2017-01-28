@@ -8,8 +8,7 @@ PORTVERSION=1.1.7
 CATEGORIES=databases
 MASTER_SITES=http://unqlite.org/db/
 DISTFILES=unqlite-db-117.zip
-WRKSRC=work
-
+WRKSRC=${WRKDIR}
 MAINTAINER=dearblue@users.noreply.github.com
 COMMENT=Embeded NoSQL database engine
 
