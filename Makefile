@@ -4,10 +4,10 @@
 #
 
 PORTNAME=unqlite
-PORTVERSION=1.1.6
+PORTVERSION=1.1.7
 CATEGORIES=databases
 MASTER_SITES=http://unqlite.org/db/
-DISTFILES=unqlite-db-20130825-116.zip
+DISTFILES=unqlite-db-117.zip
 WRKSRC=work
 
 MAINTAINER=dearblue@users.noreply.github.com
